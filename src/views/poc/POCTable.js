@@ -10,7 +10,7 @@ import {
   CPagination,
   CProgress,
 } from "@coreui/react";
-
+import { useHistory, useLocation } from 'react-router-dom'
 import pocData from "./POCData";
 import CIcon from "@coreui/icons-react";
 
@@ -28,6 +28,7 @@ const POCTable = () => {
       filter: false
     }
   ]
+  const history = useHistory()
 
   return (
         <CCard>
@@ -52,6 +53,7 @@ const POCTable = () => {
               activePage={1}
               clickableRows
               header
+              onRowClick={(item) => history.push(`/poc/${item.prospect}`)}
             ß//onRowClick={(item) => history.push(`/users/${item.id}`)}
             // scopedSlots = {{
             //   'status':

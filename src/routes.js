@@ -40,6 +40,7 @@ const User = React.lazy(() => import('./views/users/User'));
 const Plan = React.lazy(() => import('./views/compensation/compplan'));
 const People = React.lazy(() => import('./views/people/People'));
 const POCs = React.lazy(() => import('./views/poc/POCS'));
+const pocDetails = React.lazy(() => import('./views/poc/POCDetails'));
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
@@ -84,7 +85,8 @@ const routes = [
   { path: '/users/:id', exact: true, name: 'User Details', component: User },
   { path: '/compensation/Plans', name: 'Plans', component: Plan},
   { path: '/people', name: 'People', component: People},
-  { path: '/poc', name: 'POCs', component: POCs }
+  { path: '/pocs', name: 'POCs', component: POCs, exact: true },
+  { path: '/poc/:prospect', name: 'POC Details', component: pocDetails},
 ];
 
 export default routes;

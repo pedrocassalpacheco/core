@@ -41,7 +41,7 @@ const _nav = [
       {
         _tag: 'CSidebarNavItem',
         name: 'POC',
-        to: '/poc',
+        to: '/pocs',
       },
       {
         _tag: 'CSidebarNavItem',
