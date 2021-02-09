@@ -50,6 +50,24 @@ const _nav = [
       },
     ],
   },
+  {
+    _tag: 'CSidebarNavDropdown',
+    name: 'Product',
+    route: '/base',
+    icon: 'cil-puzzle',
+    _children: [
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Features',
+        to: '/features',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Cards',
+        to: '/base/cards',
+      },
+    ],
+  },
   // {
   //   _tag: 'CSidebarNavDropdown',
   //   name: 'Buttons',
