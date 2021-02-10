@@ -26,4 +26,4 @@ const Features = () => {
   )
 }
 
-export default POCS
+export default Features

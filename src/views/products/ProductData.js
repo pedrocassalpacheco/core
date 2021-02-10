@@ -1,7 +1,7 @@
-const featureData = 
+const productData = 
 [
   {
-    "feature": "Real time metric collection",
+    "product": "APM",
     "family": "1",
     "available": "yes",
     "roadmapdate": "",
@@ -9,7 +9,7 @@ const featureData =
     "comments": "sunt non consectetur do commodo consequat aliquip sunt aute consectetur"
   },
   {
-    "feature": "Root cause analysis",
+    "product": "EUM",
     "family": "1",
     "available": "yes",
     "roadmapdate": "",
@@ -17,19 +17,19 @@ const featureData =
     "comments": "sunt non consectetur do commodo consequat aliquip sunt aute consectetur"
   },
   {
-    "feature": "AI driven problem resolution",
+    "product": "LOG",
     "family": "2",
-    "available": "",
+    "available": "no",
     "roadmapdate": "11/11/2024",
     "comments": "sunt non consectetur do commodo consequat aliquip sunt aute consectetur"
   },
   {
-    "feature": "Other nonsense that people never want to buy",
+    "product": "Other nonsense that people never want to buy",
     "family": "2",
-    "available": "yes",
+    "available": "no",
     "roadmapdate": "11/11/2025",
     "comments": "sunt non consectetur do commodo consequat aliquip sunt aute consectetur"
   }
 ]
 
-export default featureData;
+export default productData;

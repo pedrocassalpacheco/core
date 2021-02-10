@@ -16,14 +16,14 @@ import React, { lazy } from 'react'
 
 //import MainChartExample from '../charts/MainChartExample.js'
 
-const FeatureTable = lazy(() => import('./FeatureTable'))
+const ProductTable = lazy(() => import('./ProductTable'))
 
-const Features = () => {
+const Products = () => {
   return (
     <>
-      <FeatureTable/>
+<ProductTable/>
     </>
   )
 }
 
-export default POCS
+export default Products
