@@ -1,5 +1,12 @@
 import React from 'react'
-import { CCard, CCardBody, CCardHeader, CCol, CRow } from '@coreui/react'
+import { CCard, CCardBody, CCardHeader, CCol, CRow, 
+  CNav,
+  CNavItem,
+  CNavLink,
+  CTabContent,
+  CTabPane,
+  CTabs
+  } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 
 import pocData from './POCData'
@@ -18,7 +25,28 @@ const POCDetails = ({match}) => {
           <CCardHeader>
             Prospect: {match.params.prospect}
           </CCardHeader>
+
           <CCardBody>
+          <CTabs>
+              <CNav variant="tabs">
+                <CNavItem>
+                  <CNavLink>
+                    Home
+                  </CNavLink>
+                </CNavItem>
+                <CNavItem>
+                  <CNavLink>
+                    Schedule
+                  </CNavLink>
+                </CNavItem>
+                <CNavItem>
+                  <CNavLink>
+                    Risk
+                  </CNavLink>
+                </CNavItem>
+              </CNav>
+              <CTabContent>
+
               <table className="table table-striped table-hover">
                 <tbody>
                   {
@@ -33,6 +61,8 @@ const POCDetails = ({match}) => {
                   }
                 </tbody>
               </table>
+              </CTabContent>
+              </CTabs>
           </CCardBody>
         </CCard>
       </CCol>
