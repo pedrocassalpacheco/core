@@ -46,7 +46,9 @@ const POCDetails = ({match}) => {
                 </CNavItem>
               </CNav>
               <CTabContent>
+                <CTabPane>
 
+                
               <table className="table table-striped table-hover">
                 <tbody>
                   {
@@ -61,6 +63,7 @@ const POCDetails = ({match}) => {
                   }
                 </tbody>
               </table>
+              </CTabPane>
               </CTabContent>
               </CTabs>
           </CCardBody>
