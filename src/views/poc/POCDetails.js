@@ -5,11 +5,20 @@ import { CCard, CCardBody, CCardHeader, CCol, CRow,
   CNavLink,
   CTabContent,
   CTabPane,
-  CTabs
+  CTabs,
+  CForm,
+  CFormGroup,
+  CFormText,
+  CValidFeedback,
+  CInvalidFeedback,
+  CTextarea,
+  CInput,
+  CLabel
   } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 
 import pocData from './POCData'
+import pocDates from './POCDates'
 
 const POCDetails = ({match}) => {
   console.log(match.params.prospect);
@@ -19,8 +28,8 @@ const POCDetails = ({match}) => {
     [['id', (<span><CIcon className="text-muted" name="cui-icon-ban" /> Not found</span>)]]
 
   return (
-    <CRow>
-      <CCol lg={6}>
+    // <CRow>
+    //   <CCol lg={6}>
         <CCard>
           <CCardHeader>
             Prospect: {match.params.prospect}
@@ -47,29 +56,36 @@ const POCDetails = ({match}) => {
               </CNav>
               <CTabContent>
                 <CTabPane>
-
-                
-              <table className="table table-striped table-hover">
-                <tbody>
-                  {
-                    details.map(([key, value], index) => {
-                      return (
-                        <tr key={index.toString()}>
-                          <td>{`${key}:`}</td>
-                          <td><strong>{value}</strong></td>
-                        </tr>
-                      )
-                    })
-                  }
-                </tbody>
-              </table>
-              </CTabPane>
+                  <table className="table table-striped table-hover">
+                    <tbody>
+                      {
+                        details.map(([key, value], index) => {
+                          return (
+                            <tr key={index.toString()}>
+                              <td>{`${key}:`}</td>
+                              <td><strong>{value}</strong></td>
+                            </tr>
+                          )
+                        })
+                      }
+                    </tbody>
+                  </table>
+                </CTabPane>
+                <CTabPane>
+                  <CCard><CCardHeader>
+            Planned Dates
+            
+          </CCardHeader>
+            
+               <pocData/>   
+                  </CCard>
+                </CTabPane>
               </CTabContent>
               </CTabs>
           </CCardBody>
         </CCard>
-      </CCol>
-    </CRow>
+    //   </CCol>
+    // </CRow>
   )
 }
 
