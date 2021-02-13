@@ -21,7 +21,7 @@ const Tabs = () => {
 
   return (
     <CRow>
-      <CCol xs="12" md="6" className="mb-4">
+      <CCol className="mb-4">
         <CCard>
           <CCardHeader>
             Index indentifiers
