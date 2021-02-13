@@ -42,7 +42,7 @@ const POCSchedule = () => {
             Planned
           </CCol>
           <CCol>
-            Planned
+            Actual
           </CCol>
         </CRow>
       {dateTypes.map((name) => (

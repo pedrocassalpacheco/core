@@ -83,19 +83,24 @@ const POCDetails = ({ match }) => {
                       <CProgressBar color="danger" value={20} />
                     </CProgress>
                     <br></br>
-                      <POCSchedule/>
+                    <POCSchedule />
                   </CCardBody>
                 </CTabPane>
                 <CTabPane></CTabPane>
                 <CTabPane>
-                  <POCIssues/>
+                  <POCIssues />
+                  <CCard><CCardHeader>
+                  </CCardHeader>
+                    <pocData />
+                  </CCard>
+
                 </CTabPane>
               </CTabContent>
             </CTabs>
           </CCardBody>
         </CCard>
-      </CCol>
-    </CRow>
+       </CCol>
+     </CRow>
   )
 }
 
