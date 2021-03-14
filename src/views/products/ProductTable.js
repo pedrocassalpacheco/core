@@ -4,11 +4,7 @@ import {
   CCard,
   CCardBody,
   CCardHeader,
-  CCol,
   CDataTable,
-  CRow,
-  CPagination,
-  CProgress,
 } from "@coreui/react";
 import { useHistory, useLocation } from 'react-router-dom'
 import productData from "./ProductData";
@@ -24,45 +20,36 @@ const getBadge = status => {
 
 const ProductTable = () => {
   const fields = [
-    { key: 'prospect', _style: { width: '40%' } },
-    'registered',
-    { key: 'role', _style: { width: '20%' } },
-    { key: 'status', _style: { width: '20%' } },
-    {
-      key: 'show_details',
+    { key: '_id', _style: { width: '40%' } },
+    { key: 'product', _style: { width: '40%' } },
+    { key: 'show_details',
       label: '',
       _style: { width: '1%' },
       sorter: false,
       filter: false
     }
-
   ]
 
   const history = useHistory()
+  const products = productData("hello");
 
   return (
     <CCard>
       <CCardHeader>
-        Features
+        Products
           </CCardHeader>
-      <p>{JSON.stringify(productData)}</p>
       <CCardBody>
         <CDataTable
           columns
-          items={productData}
-          fields={[
-            { key: 'product', _classes: 'font-weight-bold' },
-            'family',
-            'available',
-            'ddddd'
-          ]}
+          items={products}
+          fields={fields}
           hover
           striped
           itemsPerPage={10}
           activePage={1}
           clickableRows
           header
-          //onRowClick={(item) => history.push(`/poc/${item.prospect}`)}
+          onRowClick={(item) => history.push(`/product/${item._id}`)}
           //onRowClick={(item) => history.push(`/users/${item.id}`)}
           scopedSlots={{
             'available':
@@ -78,6 +65,8 @@ const ProductTable = () => {
       </CCardBody>
     </CCard>
   );
+
+  
 };
 
 export default ProductTable;

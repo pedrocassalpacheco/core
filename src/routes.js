@@ -43,7 +43,7 @@ const POCs = React.lazy(() => import('./views/poc/POCS'));
 const pocDetails = React.lazy(() => import('./views/poc/POCDetails'));
 const features = React.lazy(() => import('./views/features/Features'));
 const products = React.lazy(() => import('./views/products/Products'));
-
+const productDetails = React.lazy(() => import('./views/products/ProductDetails'));
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
@@ -90,7 +90,8 @@ const routes = [
   { path: '/pocs', name: 'POCs', component: POCs, exact: true },
   { path: '/poc/:prospect', name: 'POC Details', component: pocDetails},
   { path: '/features', name: 'Features', component: features},
-  { path: '/products', name: 'Products', component: products}
+  { path: '/products', name: 'Products', component: products},
+  { path: '/product/:product', name: 'Product Details', component: productDetails}
 ];
 
 export default routes;

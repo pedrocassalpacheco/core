@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
 const ProductData = ({id}) => {
-  console.log(id);
+  
   const[products,setProducts]= useState([]);
-
+  console.log("Hello" + id);
   useEffect(() => {
     //fetch("https://jsonplaceholder.typicode.com/posts")
     fetch("http://localhost:8080/products")
